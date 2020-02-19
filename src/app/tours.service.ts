@@ -18,7 +18,7 @@ export class ToursService {
   }
 
   addNewTour(tour: ITour) {
-    return this.http.post('/api/ours', tour);
+    return this.http.post('/api/tours', tour);
   }
 
   setTourOverview(tour: ITourClient) {
