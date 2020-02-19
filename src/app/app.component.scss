@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+}
+.cards-list-wrapper,
+.cards-overview-wrapper {
+  flex-grow: 1;
+  flex-basis: 50%;
+  margin: 1%;
+}
+app-mini-basket {
+  margin-left: auto;
+}

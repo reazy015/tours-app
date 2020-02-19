@@ -1,0 +1,11 @@
+<div class="tour-overview-wrapper">
+  <p *ngIf="!currentTour" [style.textAlign]="'center'">No tour selected, please select one to overview</p>
+
+  <div class="tour-overview-info" *ngIf="currentTour">
+    <h4>{{currentTour.name}}</h4>
+    <p>Price: <b>{{currentTour.price | currency}}</b></p>
+    <p><b>Description:</b></p>
+    <p>{{currentTour.description}}</p>
+    <app-tour-buy-button [tour]="currentTour"></app-tour-buy-button>
+  </div>
+</div>

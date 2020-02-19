@@ -1,0 +1,9 @@
+<mat-card (click)="onSetTourOverviewHandler($event)">
+  <mat-card-header>
+    <mat-card-title>{{tour.name}}</mat-card-title>
+    <mat-card-subtitle>Price: {{tour.price | currency}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <app-tour-buy-button [tour]="tour"></app-tour-buy-button>
+  </mat-card-actions>
+</mat-card>
