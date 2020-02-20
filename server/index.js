@@ -15,6 +15,8 @@ app.use(cors());
 
 // Routes
 app.use('/api/tours', require('./routes/api/tours'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 app.get('/', (req, res) => res.json({msg: 'Message from server'}));
 

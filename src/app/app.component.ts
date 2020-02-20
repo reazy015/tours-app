@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {ITour, ITourClient} from './interfaces';
 import {ToursService} from './tours.service';
+import {AuthService} from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,8 @@ import {ToursService} from './tours.service';
 export class AppComponent implements OnInit {
   tours: ITourClient[];
 
-  constructor(private toursService: ToursService) {
+  constructor(private toursService: ToursService,
+              private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -24,5 +25,7 @@ export class AppComponent implements OnInit {
     this.toursService.tourAddedToDB.subscribe((tour: ITour) => {
       this.tours.push({...tour, status: true});
     });
+
+    // this.authService.login('tourstest@email.com', '313373vladimir').subscribe(res => console.log(res));
   }
 }

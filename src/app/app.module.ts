@@ -12,6 +12,7 @@ import {TourBuyButtonComponent} from './tour-buy-button/tour-buy-button.componen
 import {TourCreateComponent} from './tour-create/tour-create.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { TourDialogTriggerComponent } from './tour-dialog-trigger/tour-dialog-trigger.component';
+import {httpInterceptorProvider} from './http-interceptors';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { TourDialogTriggerComponent } from './tour-dialog-trigger/tour-dialog-tr
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
