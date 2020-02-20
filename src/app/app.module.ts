@@ -11,8 +11,9 @@ import {MiniBasketComponent} from './mini-basket/mini-basket.component';
 import {TourBuyButtonComponent} from './tour-buy-button/tour-buy-button.component';
 import {TourCreateComponent} from './tour-create/tour-create.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { TourDialogTriggerComponent } from './tour-dialog-trigger/tour-dialog-trigger.component';
+import {TourDialogTriggerComponent} from './tour-dialog-trigger/tour-dialog-trigger.component';
 import {httpInterceptorProvider} from './http-interceptors';
+import {AuthShowDirective} from './directives/auth-show.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {httpInterceptorProvider} from './http-interceptors';
     MiniBasketComponent,
     TourBuyButtonComponent,
     TourCreateComponent,
-    TourDialogTriggerComponent
+    TourDialogTriggerComponent,
+    AuthShowDirective,
   ],
   imports: [
     BrowserModule,
